@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./web
+    ports:
+      - "5000:5000"
+    environment:
+      - DETECTION_SERVICE_URL=http://detector:5001
+      - GROUPING_SERVICE_URL=http://grouping:5002
+    volumes:
+      - ./web/static/uploads:/app/static/uploads
+    depends_on:
+      - detector
+      - grouping
+
+  detector:
+    build: ./detector
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./web/static/uploads:/app/images
+
+  grouping:
+    build: ./grouping
+    ports:
+      - "5002:5002"
+    volumes:
+      - ./web/static/uploads:/app/images
+
+volumes:
+  shared_images:
+    driver: local

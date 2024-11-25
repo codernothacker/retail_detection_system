@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retail Product Detection</title>
+    <style>
+        .upload-form {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            margin: 10px 0;
+        }
+        .preview {
+            max-width: 500px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-form">
+        <h2>Upload Image for Product Detection</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept=".jpg,.jpeg,.png" required>
+            <button type="submit">Upload and Detect</button>
+        </form>
+    </div>
+    <div id="error" class="error"></div>
+    <div id="imagePreview" class="preview"></div>
+</body>
+</html>
