@@ -78,7 +78,7 @@ The Retail Product Detection System is a microservices-based application that de
 ### Setup Steps
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/codernothacker/retail_detection_system.git
    cd retail-detection-system
    ```
 
