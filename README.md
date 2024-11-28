@@ -6,7 +6,7 @@ A microservices-based system for detecting and grouping retail products in shelf
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/codernothacker/retail_detection_system.git
 cd retail-detection-system
 ```
 
