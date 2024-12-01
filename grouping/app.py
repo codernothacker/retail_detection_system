@@ -6,7 +6,7 @@ import traceback
 import logging
 from utils.error_handlers import handle_errors
 from config import GroupingConfig
-from utils import setup_logger, extract_roi_features, draw_group_visualization
+from utils import extract_roi_features, draw_group_visualization
 
 logging.basicConfig(
     level=logging.DEBUG,
